@@ -4,7 +4,7 @@ const ComputerCard = ({card}) => {
     return(
     <div className='ComputerCard'>
     <h4>{card.name}</h4>
-    <img src={card.picture} alt="characterpicture"></img>
+    <img src={card.picture} alt="characterpicture" width="200px"></img>
     <h5>Attack: {card.attack}</h5>
     <h5>Control: {card.control}</h5>
     <h5>Defence: {card.defence}</h5>

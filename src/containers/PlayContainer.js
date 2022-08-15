@@ -4,7 +4,6 @@ import Game from "../components/Game";
 
 const PlayContainer = ({cards}) => {
     
-    // const [cards, setCards] = useState([]);
     const [playerCards, setPlayerCards] = useState([]);
     const [computerCards, setComputerCards] = useState([]);
 
