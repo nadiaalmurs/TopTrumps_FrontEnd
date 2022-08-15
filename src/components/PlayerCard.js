@@ -1,7 +1,8 @@
 
 const PlayerCard = ({card, handleAttackClick, handleControlClick, handleDefenceClick, handleFragsClick, handleLurkClick}) => {
 
-    
+    console.log(card.id);
+
     return (
     <div className='PlayerCard'>
     <h4>{card.name}</h4>

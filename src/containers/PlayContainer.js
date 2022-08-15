@@ -22,7 +22,7 @@ const PlayContainer = ({cards}) => {
     }, [cards])
 
     return (
-        <Game cards={cards} playerCards={playerCards} computerCards={computerCards}/>
+        <Game cards={cards} playerCards={playerCards} computerCards={computerCards} />
     )
 }
 
