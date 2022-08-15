@@ -3,9 +3,9 @@
 const InstructionsContainer = () => {
   
     return(
-        <>
+        <p>
         How to Play!
-        </>
+        </p>
     )
 }
 
