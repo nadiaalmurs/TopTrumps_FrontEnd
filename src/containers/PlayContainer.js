@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import Game from "../components/Game";
 
-const PlayContainer = () => {
+const PlayContainer = ({cards}) => {
     
-    const [cards, setCards] = useState([]);
+    // const [cards, setCards] = useState([]);
     const [playerCards, setPlayerCards] = useState([]);
     const [computerCards, setComputerCards] = useState([]);
 
@@ -22,29 +22,8 @@ const PlayContainer = () => {
         setComputerCards([...tempComputerCards])
     }, [cards])
 
-    function shuffleCards(cardArray) {
-        if (cardArray.length !== 0) {
-            let currentIndex = cardArray.length;
-            let temporaryValue;
-            let randomIndex;
-
-            while (0 !== currentIndex) {
-
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex = currentIndex - 1;
-
-                temporaryValue = { ...cardArray[currentIndex] };
-                cardArray[currentIndex] = cardArray[randomIndex];
-                cardArray[randomIndex] = temporaryValue;
-            }
-            return cardArray;
-        } else {
-            return
-        }
-    };
-
     return (
-        <Game/>
+        <Game cards={cards} playerCards={playerCards} computerCards={computerCards}/>
     )
 }
 

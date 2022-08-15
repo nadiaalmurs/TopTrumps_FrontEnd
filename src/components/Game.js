@@ -9,8 +9,8 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
     shuffleCards(cards)
 
     function shuffleCards(cardArray) {
-        if (cardArray.length !== 0) {
-            let currentIndex = cardArray.length;
+        if (cardArray !== 0) {
+            let currentIndex = 18;
             let temporaryValue;
             let randomIndex;
 
