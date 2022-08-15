@@ -58,9 +58,9 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
 
     function compareSkill (skill){
         if (playerCards[0][skill] > computerCards[0][skill]) {
-            setResult('Player Wins')
+            setResult('You Win!')
         } else if (playerCards[0][skill] < computerCards[0][skill]) {
-            setResult('Computer Wins')
+            setResult('You Lose!')
         } else if (playerCards[0][skill] === computerCards[0][skill]) {
             setResult('Draw!')
         } else {
@@ -79,7 +79,7 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
 
     return (
         <>
-        <b>Result: {result}</b>
+        <b>{result}</b>
         <b>{playerItems[0]}</b>
         <b>{computerItems[0]}</b>
         </>
