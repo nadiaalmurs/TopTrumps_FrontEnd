@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 
 
 const HomeContainer = () => {
   
     return(
         <>
-        THIS IS HOME
+        <Link to="/instructions">How to Play!</Link>
+        <Link to="/cards">Cards</Link>
+        <Link to="/play">Play</Link>
         </>
     )
 }
