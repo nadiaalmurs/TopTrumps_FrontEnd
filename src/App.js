@@ -5,6 +5,8 @@ import CardDetail from './components/CardDetail.js';
 import HomeContainer from './containers/HomeContainer';
 import InstructionsContainer from './containers/InstructionsContainer';
 import PlayContainer from './containers/PlayContainer';
+import './App.css'
+import styled from 'styled-components';
 
 const App = () => {
 
@@ -27,7 +29,7 @@ const App = () => {
     }
 
     return (
-        <>
+        <div className='App'>
         <Router>
         <Routes>
         <Route path="/" element={<HomeContainer/>}/>
@@ -36,8 +38,8 @@ const App = () => {
         <Route path="/instructions" element={<InstructionsContainer/>} />
         </Routes>
         </Router> 
-        </>
-      )
+        </div>
+        )
 }
 
 export default App;
