@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PlayerCard = ({card, handleClick, handleAttackClick, handleControlClick, handleDefenceClick, handleFragsClick, handleLurkClick}) => {
+const PlayerCard = ({card, handleAttackClick, handleControlClick, handleDefenceClick, handleFragsClick, handleLurkClick}) => {
 
     const Card = styled.div`
     width: 250px;

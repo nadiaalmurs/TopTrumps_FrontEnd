@@ -11,6 +11,7 @@ import styled from 'styled-components';
 const App = () => {
 
     const [cards, setCards] = useState([]);
+    const [cardsOrdered, setCardsOrdered] = useState([]);
 
     useEffect(()=> {
     getCards()

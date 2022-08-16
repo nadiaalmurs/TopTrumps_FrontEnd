@@ -10,11 +10,6 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
     const [result, setResult] = useState(null);
     const [showComputerCard, setShowComputerCard] = useState(false);
 
-    const handleClick = event => {
-        setShowComputerCard(true);
-    };
-    
-
     shuffleCards(cards)
 
     function shuffleCards(cardArray) {
@@ -82,7 +77,7 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
 
     const playerItems = playerCards.map((card, index) => {
 
-        return <PlayerCard card={card} key={index} handleClick={handleClick} handleAttackClick={handleAttackClick} handleControlClick={handleControlClick} handleDefenceClick={handleDefenceClick} handleFragsClick={handleFragsClick} handleLurkClick={handleLurkClick}/>
+        return <PlayerCard card={card} key={index} handleAttackClick={handleAttackClick} handleControlClick={handleControlClick} handleDefenceClick={handleDefenceClick} handleFragsClick={handleFragsClick} handleLurkClick={handleLurkClick}/>
     })
 
     const computerItems = computerCards.map((card, index) => {
