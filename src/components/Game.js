@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
-import App from "../App";
-import PlayContainer from "../containers/PlayContainer";
+import { useState } from "react";
 import ComputerCard from "./ComputerCard";
 import PlayerCard from "./PlayerCard";
 import styled from "styled-components";
 
-const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCards, computerCards}) => {
+const Game = ({cards, setPlayerCards, playerCards, setComputerCards, computerCards}) => {
 
     const [result, setResult] = useState(null);
     const [showComputerCard, setShowComputerCard] = useState(false);

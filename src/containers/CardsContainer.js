@@ -1,5 +1,4 @@
 import CardList from "../components/CardList"
-import App from "../App";
 import styled from "styled-components";
 
 
