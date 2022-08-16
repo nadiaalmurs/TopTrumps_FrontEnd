@@ -17,6 +17,8 @@ const CardDetail = ({card}) => {
     background-color: #fe4655;
     line-height: 2;
     padding: 5px;
+    font-family: 'DIN Next LT Pro Bold', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
     `
 
 return (

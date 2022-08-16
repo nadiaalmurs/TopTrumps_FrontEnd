@@ -1,5 +1,6 @@
 import React from 'react';
 import CardDetail from './CardDetail';
+import styled from 'styled-components';
 
 
 const CardList = ({cards}) => {
@@ -8,12 +9,17 @@ const CardList = ({cards}) => {
       return <CardDetail card={card} key={index}/>
     })
 
+    const CardListContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    `
+
   return (
-    <div>
+    <CardListContainer>
     <ul>
       {cardItems}
     </ul>
-  </div>
+  </CardListContainer>
   )
 }
 

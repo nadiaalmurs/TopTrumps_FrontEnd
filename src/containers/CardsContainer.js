@@ -16,7 +16,8 @@ const CardsContainer= ({cards}) => {
     right: 0;
     margin: auto;
     border-radius: 20px;
-    display: flex;
+    display: grid;
+    grid-template-rows: 20% 80%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -24,12 +25,29 @@ const CardsContainer= ({cards}) => {
 
     const Header = styled.h1`
     text-align: center;
+    font-family: 'DIN Next LT Pro Bold', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    `
+
+    const HeaderContainer = styled.div`
+    grid-row-start: 1;
+    grid-row-end: 1;
+    `
+
+    const CardsGrid = styled.div`
+        grid-row-start: 2;
+        grid-row-end: 2;
     `
 
 return (
     <BoxContainer>
+        <HeaderContainer>
         <Header>Cards</Header>
+        </HeaderContainer>
+        <CardsGrid>
     <CardList cards={cards}/>
+        </CardsGrid>
     </BoxContainer>
 )
 }
