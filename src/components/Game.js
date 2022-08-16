@@ -8,6 +8,12 @@ import styled from "styled-components";
 const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCards, computerCards}) => {
 
     const [result, setResult] = useState(null);
+    const [showComputerCard, setShowComputerCard] = useState(false);
+
+    const handleClick = event => {
+        setShowComputerCard(true);
+    };
+    
 
     shuffleCards(cards)
 
@@ -71,7 +77,7 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
 
     const playerItems = playerCards.map((card, index) => {
 
-        return <PlayerCard card={card} key={index} handleAttackClick={handleAttackClick} handleControlClick={handleControlClick} handleDefenceClick={handleDefenceClick} handleFragsClick={handleFragsClick} handleLurkClick={handleLurkClick}/>
+        return <PlayerCard card={card} key={index} handleClick={handleClick} handleAttackClick={handleAttackClick} handleControlClick={handleControlClick} handleDefenceClick={handleDefenceClick} handleFragsClick={handleFragsClick} handleLurkClick={handleLurkClick}/>
     })
 
     const computerItems = computerCards.map((card, index) => {
@@ -115,9 +121,10 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
             <GridResults>
         <b> {result}</b>
             </GridResults>
+            {showComputerCard &&
             <GridComputerCard>
         <b>{computerItems[0]}</b>
-        </GridComputerCard>
+        </GridComputerCard>}
         </GridContainer>
     )
 }
