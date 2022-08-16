@@ -22,55 +22,44 @@ const HomeContainer = () => {
     flex-direction: column;
     `
 
-    const TextLink = styled.div`
-    text-align: center;
-    padding: 10px;
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        li {
-            padding: 10px;
-        }
-    }
-
-    a {
-        background-color: #fe4655;
-        color: #ebe8e1;
-        text-decoration: none;
-        padding: 5px;
-        border-radius: 5px;
-    }
-
-    a:hover {
-        background-color: black;
-        color: #ebe8e1;
-        padding: 5px;
-        border-radius: 5px;
-    }
-    `
-
     const Header = styled.h1`
     text-align: center;
+    font-family: 'DIN Next LT Pro Bold', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    `
+
+    const Links = styled.div`
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     `
 
     return(
         <BoxContainer>
             <Header>Valorant Top Trumps</Header>
-            <TextLink>
-                <ul>
-                    <li>
-        <Link to="/instructions">How to Play!</Link>
-                    </li>
-                    <li>
-        <Link to="/cards">Cards</Link>
-                    </li>
-                    <li>
-        <Link to="/play">Play</Link>
-                    </li>
-                </ul>
-            </TextLink>
+            <Links>
+        <button>
+            <div>
+                <span></span>
+        <a href="/instructions">How to Play!</a>
+            </div>
+        </button>
+        <button>
+            <div>
+                <span></span>
+        <a href="/cards">Cards</a>
+            </div>
+        </button>
+        <button>
+            <div>
+                <span></span>
+        <a href="/play">Play</a>
+            </div>
+        </button>
+        </Links>
         </BoxContainer>
     )
 }

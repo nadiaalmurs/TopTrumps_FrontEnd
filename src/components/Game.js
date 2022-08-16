@@ -104,6 +104,10 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
+        text-align: center;
+        font-family: 'DIN Next LT Pro Bold', Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
     `
 
     const GridComputerCard = styled.div`

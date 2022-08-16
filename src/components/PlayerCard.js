@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import '../App.css';
 
 const PlayerCard = ({card, handleAttackClick, handleControlClick, handleDefenceClick, handleFragsClick, handleLurkClick}) => {
 
@@ -15,17 +16,19 @@ const PlayerCard = ({card, handleAttackClick, handleControlClick, handleDefenceC
     background-color: #fe4655;
     line-height: 2;
     padding: 5px;
+    font-family: 'DIN Next LT Pro Bold', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
     `
 
     return (
     <Card>
     <h4>{card.name}</h4>
     <img src={card.picture} alt="characterpicture" width="200px"></img>
-    <b onClick={handleAttackClick}>Attack: {card.attack}</b>
-    <b onClick={handleControlClick}>Control: {card.control}</b>
-    <b onClick={handleDefenceClick}>Defence: {card.defence}</b>
-    <b onClick={handleFragsClick}>Frags: {card.frags}</b>
-    <b onClick={handleLurkClick}>Lurk: {card.lurk}</b>
+    <b onClick={handleAttackClick} className="skills-button" >Attack: {card.attack}</b>
+    <b onClick={handleControlClick} className="skills-button" >Control: {card.control}</b>
+    <b onClick={handleDefenceClick} className="skills-button">Defence: {card.defence}</b>
+    <b onClick={handleFragsClick} className="skills-button" >Frags: {card.frags}</b>
+    <b onClick={handleLurkClick} className="skills-button" >Lurk: {card.lurk}</b>
     </Card>
     )
 }

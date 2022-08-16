@@ -1,5 +1,89 @@
+@import url(//db.onlinewebfonts.com/c/3a88649e176a40a6d80b395ca0ae430d?family=DIN+Next+LT+Pro+Bold);
+@import url(https://fonts.google.com/specimen/Tajawal);
+
 body {
     margin: 0;
     padding: 0;
     background-color: black;
     }
+
+button {
+  all: unset;
+  position: relative;
+  cursor: pointer;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: -10px;
+  width: calc(100% + 20px);
+  height: calc(50% + 5px);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  bottom: -10px;
+  width: calc(100% + 20px);
+  height: calc(50% + 5px);
+}
+
+button div {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  padding: 15px 0;
+  background: #ff4655;
+}
+
+button div::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #0f1923;
+  transition: 0.4s;
+}
+
+button:hover div::after {
+    background: #ece8e1;
+}
+
+button div span {
+  position: absolute;
+  width: 120%;
+  height: 110%;
+  transform: translate(-100%, -20px);
+  background: #0f1923;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+  transition: 0.4s;
+}
+
+button:hover div span {
+  transform: translate(-10%, -20px);
+}
+
+button div a {
+  position: relative;
+  text-decoration: none;
+  color: #ebe8e1;
+  font-family: 'DIN Next LT Pro Bold', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 20px 80px;
+}
+
+.skills-button:hover {
+    background-color: #ece8e1;
+    cursor: pointer;
+    min-width: 100px;
+    text-align: center;
+}

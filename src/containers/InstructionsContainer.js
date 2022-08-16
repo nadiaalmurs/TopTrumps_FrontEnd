@@ -21,16 +21,21 @@ const InstructionsContainer = () => {
 
     const Header = styled.h1`
     text-align: center;
+    font-family: 'DIN Next LT Pro Bold', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
     `
 
     const Paragraph = styled.p`
     text-align: center;
+    font-family: 'Tajawal', Arial, Helvetica, sans-serif;
+    font-size: 20px;
     `
 
     return(
         <BoxContainer>
         <Header>
-        How to Play!
+        How to Play
         </Header>
         <Paragraph>
             Click on the skill you would like to play.
