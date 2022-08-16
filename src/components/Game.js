@@ -41,26 +41,31 @@ const Game = ({cards, shuffleCards, setPlayerCards, playerCards, setComputerCard
     const handleAttackClick = (event) => {
         event.preventDefault();
         compareSkill("attack")
+        setShowComputerCard(true);
     }
 
     const handleControlClick = (event) => {
         event.preventDefault();
         compareSkill("control")
+        setShowComputerCard(true);
     }
 
     const handleDefenceClick = (event) => {
         event.preventDefault();
         compareSkill("defence")
+        setShowComputerCard(true);
     }
 
     const handleFragsClick = (event) => {
         event.preventDefault();
         compareSkill("frags")
+        setShowComputerCard(true);
     }
 
     const handleLurkClick = (event) => {
         event.preventDefault();
         compareSkill("lurk")
+        setShowComputerCard(true);
     }
 
     function compareSkill (skill){
