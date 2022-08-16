@@ -1,18 +1,32 @@
+import styled from "styled-components";
 
 const PlayerCard = ({card, handleAttackClick, handleControlClick, handleDefenceClick, handleFragsClick, handleLurkClick}) => {
 
-    console.log(card.id);
+    const Card = styled.div`
+    width: 250px;
+    height: 450px;
+    background-color: #ebe8e1;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fe4655;
+    line-height: 2;
+    padding: 5px;
+    `
 
     return (
-    <div className='PlayerCard'>
+    <Card>
     <h4>{card.name}</h4>
     <img src={card.picture} alt="characterpicture" width="200px"></img>
-    <h5 onClick={handleAttackClick}>Attack: {card.attack}</h5>
-    <h5 onClick={handleControlClick}>Control: {card.control}</h5>
-    <h5 onClick={handleDefenceClick}>Defence: {card.defence}</h5>
-    <h5 onClick={handleFragsClick}>Frags: {card.frags}</h5>
-    <h5 onClick={handleLurkClick}>Lurk: {card.lurk}</h5>
-    </div>
+    <b onClick={handleAttackClick}>Attack: {card.attack}</b>
+    <b onClick={handleControlClick}>Control: {card.control}</b>
+    <b onClick={handleDefenceClick}>Defence: {card.defence}</b>
+    <b onClick={handleFragsClick}>Frags: {card.frags}</b>
+    <b onClick={handleLurkClick}>Lurk: {card.lurk}</b>
+    </Card>
     )
 }
 
