@@ -12,7 +12,7 @@ const Game = ({cards, setPlayerCards, playerCards, setComputerCards, computerCar
 
     function shuffleCards(cardArray) {
         if (cardArray !== 0) {
-            let currentIndex = 18;
+            let currentIndex = 19;
             let temporaryValue;
             let randomIndex;
 

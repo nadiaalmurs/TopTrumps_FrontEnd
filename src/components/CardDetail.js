@@ -8,7 +8,7 @@ const CardDetail = ({card}) => {
     width: 250px;
     height: 450px;
     background-color: #ebe8e1;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -19,6 +19,7 @@ const CardDetail = ({card}) => {
     padding: 5px;
     font-family: 'DIN Next LT Pro Bold', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
     `
 
 return (

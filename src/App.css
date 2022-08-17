@@ -86,4 +86,6 @@ button div a {
     cursor: pointer;
     min-width: 100px;
     text-align: center;
+    border-radius: 20px;
+    border: 1px solid black;
 }
